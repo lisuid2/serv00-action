@@ -5,7 +5,11 @@ on:
   schedule:
     # 5分钟运行一次
     - cron: '0/5 * * * *'
-    
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/pm2.yml"
 
 jobs:
   ssh-and-run:
