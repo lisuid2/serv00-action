@@ -11,17 +11,21 @@ import os
 TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
+
 def format_to_iso(date):
     return date.strftime('%Y-%m-%d %H:%M:%S')
 
+
 async def delay_time(ms):
     await asyncio.sleep(ms / 1000)
+
 
 # 全局浏览器实例
 browser = None
 
 # telegram消息
 message = ""
+
 
 async def login(username, password, panel):
     global browser
@@ -65,12 +69,15 @@ async def login(username, password, panel):
     finally:
         if page:
             await page.close()
+
+
 # 显式的浏览器关闭函数
 async def shutdown_browser():
     global browser
     if browser:
         await browser.close()
         browser = None
+
 
 async def main():
     global message
@@ -101,12 +108,13 @@ async def main():
 
         delay = random.randint(1000, 8000)
         await delay_time(delay)
-        
+
     # message += f"🔚脚本结束，如有异常点击下方按钮👇"
     await send_telegram_message(message)
     print(f'所有{serviceName}账号登录完成！')
     # 退出时关闭浏览器
     await shutdown_browser()
+
 
 async def send_telegram_message(message):
     # 使用 Markdown 格式
@@ -139,6 +147,7 @@ async def send_telegram_message(message):
             print(f"发送消息到Telegram失败: {response.text}")
     except Exception as e:
         print(f"发送消息到Telegram时出错: {e}")
+
 
 if __name__ == '__main__':
     asyncio.run(main())
