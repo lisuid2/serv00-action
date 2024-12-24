@@ -68,7 +68,7 @@
 
 ## [恢复pm2](https://github.com/milaone/Serv00-PM2-AutoRun) /<sub>[视频_米拉一 (Milaone Channel)](https://www.youtube.com/watch?v=f5hkBPO3804)</sub>
 
-### 方法：利用github的Actions中自动工作流脚本每5分钟check一下 https://memos.milaone.app 的运行状态，出错就ssh登录运行脚本
+### 方法：利用github的Actions中自动工作流脚本每5分钟check一下 https://status.sharkbee.us.kg 的运行状态，出错就ssh登录运行脚本
 
 #### 1 在Serv00中编写PM2恢复快照脚本
 ```
@@ -155,7 +155,7 @@ jobs:
     - name: Check if service is running
       id: check_service
       run: |
-        if curl --head --silent --fail https://memos.milaone.app > /dev/null; then #这里改成你的Web服务的地址
+        if curl --head --silent --fail https://status.sharkbee.us.kg > /dev/null; then #这里改成你的Web服务的地址
           echo "service_status=running" >> $GITHUB_ENV
         else
           echo "service_status=not_running" >> $GITHUB_ENV
