@@ -128,7 +128,7 @@ Secret： 这里填刚复制出来的私钥
 Add secret 按钮提交
 
 #### 4 修改仓库中
-.github/workflows目录下的main.yml
+.github/workflows目录下的pm2.yml
 其中需要修改的地方我都进行注释。
 ```
 name: autorun
@@ -163,7 +163,7 @@ jobs:
 
     - name: Run script on remote server if service is not running
       if: env.service_status == 'not_running'
-      run: ssh -o StrictHostKeyChecking=no dino@s4.serv00.com "/home/dino/run.sh" #这里改成你的用户名@你的ssh服务器地址，以及/home/你的用户名/run.sh
+      run: ssh -o StrictHostKeyChecking=no sharkbee@s2.serv00.com "/home/sharkbee/run.sh" #这里改成你的用户名@你的ssh服务器地址，以及/home/你的用户名/run.sh
 ```
 
 
