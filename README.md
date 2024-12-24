@@ -70,6 +70,8 @@
 
 ### 方法：利用github的Actions中自动工作流脚本每5分钟check一下 https://status.sharkbee.us.kg 的运行状态，出错就ssh登录运行脚本
 
+#### [什么网站](https://www.milaone.com/archives/93.html) 是[https://status.sharkbee.us.kg]
+
 #### 1 在Serv00中编写PM2恢复快照脚本
 ```
 cd ~
