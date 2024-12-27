@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>status-serv00</title>
+    <title>status</title>
     <link rel="icon" href="favicon.ico">
     <style>
         body:before{
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          //opacity: .9;
-          z-index: -1;
-          content: "";
-          position: fixed;
-          background: url("https://api.paugram.com/wallpaper/") center/cover no-repeat;
-          background-blend-mode: multiply;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.8;
+            z-index: -1;
+            content: "";
+            position: fixed;
+            background: url("https://api.paugram.com/wallpaper/?source=gh");
+            background-repeat: no-repeat;
+            background-position-x: 90%;
+            /*background-position-y: 70%;*/
+            background-size: auto;
+            background-blend-mode: multiply;
         }
       </style>
 </head>
@@ -28,6 +32,6 @@
     <script src="./datetime.js"></script>
     <script>setInterval(function(){document.querySelector('.datetime').innerHTML = getDate()+' '+getTime();},1000);</script>
 
-    <div class="datetime"  style=" top: 50%;left: 0%;position: absolute;color: #ff0000;font-size: xx-large;display: table;width: 100%;text-align: center;"></div>
+    <div class="datetime"  style=" top: 15%;left: 0%;position: absolute;color: #ff0000;font-size: xx-large;display: table;width: 100%;text-align: center;"></div>
 </body>
 </html>
