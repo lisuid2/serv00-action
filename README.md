@@ -169,7 +169,7 @@ jobs:
 ```
 ---
 
-## serv00注册机
+## [serv00注册机](https://github.com/XyHK-HUC/Serv00-Reg)
 
 ### 项目简介
 `Serv00-Reg` 是一个自动化注册工具，支持创建账户、验证码识别等功能。该项目使用 Python 编写，并依赖于一些外部库。
