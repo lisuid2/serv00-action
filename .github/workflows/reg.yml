@@ -3,7 +3,7 @@ name: Serv00 Regist Script
 on:
   workflow_dispatch:
   schedule:
-    - cron: "* * * * *"  # 每5小时运行一次，可以根据需求调整时间
+    - cron: "* * * * *"  # 每*运行一次，可以根据需求调整时间
   push:
     branches:
       - main
@@ -11,7 +11,7 @@ on:
       - ".github/reg.yml"
        
 jobs:
-  login:
+  regist:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +28,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install ddddocr loguru requests
 
-      - name: 运行登录脚本
+      - name: 运行注册脚本
         env:
           Email: ${{ secrets.Email }}
         run: |
