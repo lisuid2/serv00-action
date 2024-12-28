@@ -2,8 +2,8 @@ name: Serv00 Regist Script
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "* * * * *"  # 每*运行一次，可以根据需求调整时间
+  #schedule:
+  #  - cron: "* */24 * * *"  # 每24小时运行一次，可以根据需求调整时间
   push:
     branches:
       - main
