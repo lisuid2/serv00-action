@@ -2,6 +2,7 @@
 
 ## [保活serv00](https://github.com/yixiu001/serv00-login) /<sub>[视频_一休](https://www.youtube.com/watch?v=ApJXnjjdFK8&t=306s)</sub>
 
+:::{保活serv00}
 #### 1. Fork 仓库
 
 1. **访问原始仓库页面**：
@@ -57,7 +58,7 @@
 
 - **ACCOUNTS_JSON**
     - 示例值:
-      ```json
+      ```
       [
             {"username": "serv00的账号", "password": "serv00的密码", "panel": "panel2.serv00.com"},
             {"username": "user2", "password": "password2", "panel": "panel2.serv00.com"}
@@ -65,6 +66,7 @@
       ```
     - 获取方法: 创建一个包含serv00账号信息的 JSON 文件，并将其内容添加到 GitHub 仓库的 Secrets 中。
 
+:::
 
 ## [恢复pm2](https://github.com/milaone/Serv00-PM2-AutoRun) /<sub>[视频_米拉一 (Milaone Channel)](https://www.youtube.com/watch?v=f5hkBPO3804)</sub>
 
@@ -168,9 +170,30 @@ jobs:
       run: ssh -o StrictHostKeyChecking=no sharkbee@s2.serv00.com "/home/sharkbee/run.sh" #这里改成你的用户名@你的ssh服务器地址，以及/home/你的用户名/run.sh
 ```
 
+## serv00注册机
+
+### 项目简介
+`Serv00-Reg` 是一个自动化注册工具，支持创建账户、验证码识别等功能。该项目使用 Python 编写，并依赖于一些外部库。
+### 下载脚本
+#### 使用 `wget` 下载
+```bash
+wget https://raw.githubusercontent.com/XyHK-HUC/Serv00-Reg/main/main.py
+```
+#### 使用 `curl` 下载
+```bash
+curl -O https://raw.githubusercontent.com/XyHK-HUC/Serv00-Reg/main/main.py
+```
+### 安装依赖
+#### 使用 `pip` 安装依赖库
+你可以通过以下指令直接从 GitHub 上安装项目所需的所有依赖库：
+```bash
+pip install -r https://raw.githubusercontent.com/XyHK-HUC/Serv00-Reg/main/requirements.txt
+```
 
 
-### 注意事项
-
+## 注意事项
+:::{注意}
 - **保密性**: Secrets 是敏感信息，请确保不要将它们泄露到公共代码库或未授权的人员。
 - **更新和删除**: 如果需要更新或删除 Secrets，可以通过仓库的 Secrets 页面进行管理。
+
+:::
