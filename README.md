@@ -2,7 +2,6 @@
 
 ## [保活serv00](https://github.com/yixiu001/serv00-login) /<sub>[视频_一休](https://www.youtube.com/watch?v=ApJXnjjdFK8&t=306s)</sub>
 
-:::{保活serv00}
 #### 1. Fork 仓库
 
 1. **访问原始仓库页面**：
@@ -65,8 +64,7 @@
           ]
       ```
     - 获取方法: 创建一个包含serv00账号信息的 JSON 文件，并将其内容添加到 GitHub 仓库的 Secrets 中。
-
-:::
+---  
 
 ## [恢复pm2](https://github.com/milaone/Serv00-PM2-AutoRun) /<sub>[视频_米拉一 (Milaone Channel)](https://www.youtube.com/watch?v=f5hkBPO3804)</sub>
 
@@ -169,6 +167,7 @@ jobs:
       if: env.service_status == 'not_running'
       run: ssh -o StrictHostKeyChecking=no sharkbee@s2.serv00.com "/home/sharkbee/run.sh" #这里改成你的用户名@你的ssh服务器地址，以及/home/你的用户名/run.sh
 ```
+---
 
 ## serv00注册机
 
@@ -192,8 +191,6 @@ pip install -r https://raw.githubusercontent.com/XyHK-HUC/Serv00-Reg/main/requir
 
 
 ## 注意事项
-:::{注意}
+
 - **保密性**: Secrets 是敏感信息，请确保不要将它们泄露到公共代码库或未授权的人员。
 - **更新和删除**: 如果需要更新或删除 Secrets，可以通过仓库的 Secrets 页面进行管理。
-
-:::
