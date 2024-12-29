@@ -132,7 +132,7 @@ def background_task(input_email: str):
             time.sleep(random.uniform(0.5, 1.2))
         if input_email in cache:
             del cache[input_email]
-        print("task:"+b)
+        print("task:"+b.__str__())
 
 
 # pip install -r requirements.txt
@@ -150,7 +150,7 @@ if __name__ == "__main__":
         if '@' not in input_email:
             print("\033[93m无效的邮箱,请重新输入.\033[0m")
             continue
-        print("main:"+a)
+        print("main:"+a.__str__())
         start_task(input_email)
     pass
 
