@@ -44,7 +44,7 @@ def start_task(input_email: str):
 def background_task(input_email: str):
     global b
     while True:
-        b = b + 1
+        b += 1
         try:
             usernames = get_user_name()
             email = input_email
@@ -94,6 +94,7 @@ def background_task(input_email: str):
                         if retry > 20:  # 此处修改重试次数，默认20次.
                             print("验证码识别失败次数过多,退出重试.")
                             return
+                        time.sleep(random.uniform(0.5, 1.0))
                         continue
                     logger.info(f"提交数据: captcha_0={captcha_0} captcha_1={captcha_1}")
                     data = f"csrfmiddlewaretoken={csrftoken}&first_name={first_name}&last_name={last_name}&username={username}&email={quote(email)}&captcha_0={captcha_0}&captcha_1={captcha_1}&question=0&tos=on"
@@ -144,7 +145,7 @@ if __name__ == "__main__":
     print(f"=============================\n\033[96m{response.text[:200]}\033[0m=============================")
     print("\033[91m输入邮箱开始自动任务,退出快捷键Ctrl+C.\033[0m")
     while True:
-        a = a + 1
+        a += 1
         input_email = input("\033[94m请输入邮箱:\033[0m")
         if '@' not in input_email:
             print("\033[93m无效的邮箱,请重新输入.\033[0m")
