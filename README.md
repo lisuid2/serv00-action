@@ -176,17 +176,17 @@ jobs:
 ### 下载脚本
 #### 使用 `wget` 下载
 ```bash
-wget https://raw.githubusercontent.com/XyHK-HUC/Serv00-Reg/main/main.py
+wget https://raw.githubusercontent.com/SharkBee80/serv00-action/refs/heads/main/main.py
 ```
 #### 使用 `curl` 下载
 ```bash
-curl -O https://raw.githubusercontent.com/XyHK-HUC/Serv00-Reg/main/main.py
+curl -O https://raw.githubusercontent.com/SharkBee80/serv00-action/refs/heads/main/main.py
 ```
 ### 安装依赖
 #### 使用 `pip` 安装依赖库
 你可以通过以下指令直接从 GitHub 上安装项目所需的所有依赖库：
 ```bash
-pip install -r https://raw.githubusercontent.com/XyHK-HUC/Serv00-Reg/main/requirements.txt
+pip install -r https://raw.githubusercontent.com/SharkBee80/serv00-action/refs/heads/main/requirements-reg.txt
 ```
 ---
 
